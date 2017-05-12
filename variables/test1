@@ -1,0 +1,11 @@
+#!/bin/bash
+#script to accept command line arguments and echo details about them 
+echo
+echo
+echo Script running is named: $0
+echo user running script: $USER
+echo hostname running script: $HOSTNAME
+echo process id of running script: $$
+echo Supplied arguments: $@ 
+echo The total number of arguments are: $#
+echo
