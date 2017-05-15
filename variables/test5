@@ -3,6 +3,6 @@
 #filename with date appended.
 echo
 arg=$1
-copy_filename=$(date +"%d-%m-%Y--%T")
-cp $1 $copy_filename-$1.txt
+copy_filename=$(date +"%d%m%T")
+cp $1 $1-$copy_filename
 echo "done"

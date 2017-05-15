@@ -1,0 +1,13 @@
+#!/bin/bash
+# script: Use xargs to accept a list of files names on the command line 
+# and create a named copy of all of the same files
+
+echo
+tag=copy
+echo "-----------starting--------"
+bsname=$(basename -s .png -a)
+ls ./images/*.png | xargs -i cp {} {}-$tag
+echo "done"
+
+
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+#script: Use filename as argument and created dated copy of the file using the
+#filename with date appended.
+echo
+arg=$1
+cpfname=$(date +"%d%T")
+#use basename command to remove trailing suffix from filename before prefixing to copied filename
+rawfname=$(basename $1 .c)
+cp $1 $rawfname-$cpfname.txt
+echo "done"
