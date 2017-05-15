@@ -4,4 +4,5 @@ echo
 head -n -$RANDOM /usr/share/dict/words | tail -n 1
 #alternative two: using sed to get random word
 sed -n "${RANDOM}p" /usr/share/dict/words
+sed -n "${RANDOM}p" /usr/share/dict/words | grep '*{1,4}'
 echo

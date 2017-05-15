@@ -1,0 +1,8 @@
+#!/bin/bash
+#script: Use filename as argument and created dated copy of the file using the
+#filename with date appended.
+echo
+arg=$1
+copy_filename=$(date +"%d-%m-%Y--%T")
+cp $1 $copy_filename-$1.txt
+echo "done"

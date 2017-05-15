@@ -1,0 +1,7 @@
+#!/bin/bash
+#script to print a random word  (uses dictionary in /usr/share/dict/words) 
+echo
+head -n -$RANDOM /usr/share/dict/words | tail -n 1
+#alternative two: using sed to get random word
+sed -n "${RANDOM}p" /usr/share/dict/words
+echo
