@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#Asking multiple  input from the user
+echo
+echo "Please enter your colors: "
+read color1 color2 color3 color5
+echo
+echo "Your colors are: $color1, $color2, $color3, $color5 "
+

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Reading from STDIN
+#Each process in Linux gets the following files:
+#STDIN: /proc/<processID>/fd/0
+#STDOUT: /proc/<processID>/fd/1
+#STDERR: /proc/<processID>/fd/2
+
+#For convinience the following shortcuts are created by the system
+#STDIN: /dev/stdin or /proc/self/fd/0 
+#STDOUT: /dev/stdout or /proc/self/fd/1
+#STDERR: /dev/stderr or /proc/self/fd/2
+
+
+# script below will read from the input file by piping
+
+echo
+echo "Getting words from a file with words listing"
+echo 
+cat /dev/stdin | cut -d',' -f 2,3 | sort
+
+
+

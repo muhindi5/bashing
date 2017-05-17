@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#Asking for input from the user
+echo
+echo "Hi what's your name?"
+read username
+echo
+echo "I\'ts nice to meet you $username"
+

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#User login from terminal
+
+echo
+read -p 'Username: ' usernamevar
+read -sp 'Password: ' passwordvar
+echo
+echo "Thank you $usernamevar. Your password '$passwordvar' was accepted"
+
