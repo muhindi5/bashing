@@ -1,0 +1,10 @@
+#!/bin/bash
+# Take input from STDIN and print the third line only
+echo
+# Create a filter from ls to print filename, size and owner only
+echo '----------------------------------------------------------'
+echo 'File Name----Size---Owner'
+cat /dev/stdin | awk '{print "     "$9 "     " $5"     " $4}' 
+echo '----------------------------------------------------------'
+echo
+

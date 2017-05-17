@@ -1,0 +1,9 @@
+#!/bin/bash
+# Take input from STDIN and print the third line only
+echo
+cat /dev/stdin | head -n 3 | tail -n 1 
+#Alternative is to use 'awk' and provide the data file FNR-->Line number in
+#file
+cat /dev/stdin | awk 'FNR==3 {print}' $1 
+echo
+

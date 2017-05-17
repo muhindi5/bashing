@@ -1,0 +1,22 @@
+#!/bin/bash
+# use different input modes and combine to make a message
+
+echo
+read -p 'Enter First Name: ' fname
+read -p 'Enter Last Name: ' lfname
+read -p 'Enter Email Address: ' email
+echo
+echo '---------------------------------'
+echo 'Personal Details'
+#Get input variables
+echo  Name: $fname Last Name: $lname Email Address: $email 
+echo 'Host Details'
+#Get environment variables
+echo  Hostname: $HOSTNAME User: $USER Shell: $SHELL
+echo  User supplied info
+#get variable from the command line
+echo  Greeting $1
+echo '---------------------------------'
+
+
+

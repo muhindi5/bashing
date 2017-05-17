@@ -1,0 +1,17 @@
+#!/bin/bash
+# Take user input and combine to make a message
+
+echo
+read -p 'Enter First Name: ' fname
+read -p 'Enter Last Name: ' lfname
+read -p 'Enter Email Address: ' email
+echo
+echo '---------------------------------'
+echo
+echo 'Your Details'
+echo  Name: $fname Last Name: $lname Email Address: $email
+echo
+echo '---------------------------------'
+
+
+
