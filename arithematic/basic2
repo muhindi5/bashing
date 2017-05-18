@@ -1,0 +1,38 @@
+#!/bin/bash
+# Using 'expr': instead of saving the result to a variable it prints the
+# answer. Does not need to be enclose the expression in quotes. Commonly used
+# with command substitution and printing the output to a variable.
+
+expr 4 + 6
+expr 4+6 # no spaces, expression will be printed not evaluated.
+expr "5 + 7" #including quotes will print the expression not evaluate it.
+expr 5 \* $1 #escape the * character which has special meaning in bash
+expr 11%2 
+a=$( expr 10 - 3 ) #using command substitution to save the result in a variable
+echo $a #expect 7
+
+#using double parentheses
+# $((expression))
+
+echo
+echo ==========Using double parenthesis==============
+res=$(( 8 + 6 ))
+echo $res #14
+
+b=$(( res + 5))
+echo $b #19
+
+(( b++ ))
+echo $b #20
+
+(( b += 4))
+echo $b
+echo
+
+echo ===========Variable length=============
+varX="Hello World"
+varY=8947322
+echo ${#varX} #11
+echo ${#varY} #7
+
+

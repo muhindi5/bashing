@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Basic arithematic using 'let'
+# if no quotes, then use no spaces within the expression
+let result=9+4
+echo $result
+
+#If quotes are used, spaces can be included in the expression
+let "a = 13 + 6"
+echo $a
+
+let a++
+echo $a
+
+#Expect 33
+let "a=a+result"
+echo "$a"
+
+#Division
+let ans=$1/$2
+echo $1 divide by $2 is: $ans
+
+# + (addition), -(subtraction), /* (multiply), / (divide)
+# % (modulus)
+
+
