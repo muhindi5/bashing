@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# script to generate a random variable based on the specified min and max values
+# on the command line
+
+expr $(($RANDOM%100))
+
+#get modulus value from user
+expr $(($RANDOM%$1))

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#script to generate a random variable between 0 and 100
+
+expr $(($RANDOM%100))
