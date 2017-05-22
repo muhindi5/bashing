@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Script to print tomorrows date 
+future=$(date --date="10 years" +"%d-%m-%Y %T %zGMT")
+echo On a day like this, 10 years from now it will be: $future
+  
+

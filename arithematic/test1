@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Script to take 2 arguments and multiply them using different methods
+
+let result=$1+$2 #method 1: using let
+echo $result
+expr $1 + $2 #method 2: using expr to evaluate and print result to screen
+ans=$(($1+$2)) #method 3: using double parenthesis on expr to store result in variable
+echo $ans
+ 
