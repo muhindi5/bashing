@@ -1,0 +1,41 @@
+#!/bin/bash
+# using test. Will return 0 for true and 1 for false
+
+test 1 = 001
+echo $?
+
+test -n "butter"
+echo $?
+
+test 5 -eq 5.0 #numeric comparision of values
+echo $?
+
+test -n "Dexters" #length of string is greater than 0
+echo $?
+
+test "man" = "men" #check if string 1 is equal to string 2
+echo $?
+
+test 6.45 -gt 6.54 #integer 1 is greater than integer 2
+echo $?
+
+test 0.00 != 0.001 # integer 1 not equal to integer 2
+echo Is 0.00 equal to 0.001? $?
+
+echo ==========================================================
+#Testing files and directories
+mkdir ifsdir
+test -d ifsdir # test if FILE exists and is a directory
+echo directory exixsts $?
+
+touch testfile
+test -e testfile # FILE exists
+echo File exists $?
+
+test -r testfile #FILE exists and read permission is granted, use -w and -x for testing write and execute permissions on the file
+echo File exists and is readable to user $?
+
+test -s testfile
+echo file exists and size greater than 0 i.e not empty $?
+
+
