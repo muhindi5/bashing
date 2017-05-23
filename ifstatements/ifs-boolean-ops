@@ -1,0 +1,16 @@
+#!/bin/bash
+#using boolean operators
+
+if [ -r $1 ] && [ -s $1 ]
+then
+    echo This file is readable and is not empty
+fi
+
+#check logged in user
+if [ $USER == "kelly" ]
+then 
+    echo logged in
+    ls -la
+else
+    echo $USER is the current login
+fi

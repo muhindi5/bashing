@@ -1,0 +1,13 @@
+#!/bin/bash
+#using else-if statements
+
+echo 
+if [ $1 -ge 10 ]
+    then
+        echo Number is OK
+    elif [ $1 -ge 1 ]
+    then
+        echo Number is a bit low but good.
+    else
+        echo Invalid number
+fi
