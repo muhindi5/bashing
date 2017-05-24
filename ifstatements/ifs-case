@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Using case statements
+#Echo user supplied entry
+
+case $1 in
+	start)
+		echo Starting
+		;;
+	stop)
+		echo Stopping
+		;;
+	restart)
+		echo Restarting
+		;;
+	*)
+		echo Invalid Entry
+		;;
+esac
+
+
