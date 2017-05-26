@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#basic until loop
+
+until [ $counter -gt 100 ]
+
+	do
+	echo $counter
+	((counter++))
+	done
+echo All Done

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Basic for loop
+
+names='Tim Barners Lee' #create a simple list
+
+for name in $names # for each item in the list assign the item to var name
+do
+	echo $name #print the current variable
+done
+echo All done
+	
