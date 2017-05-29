@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#convert all <.x> iles in dir to <.y> extension 
+
+
+ext1=$2
+ext2=$3
+verbose_opt=$4
+
+if [ ! -z $verbose_opt ]; then
+	echo Turned on logging
+	on=1 #logging switch	
+fi
+
+for value in $1/*.$ext1
+do
+	if [ $on==1 ]; then
+			echo Changing file: $value
+	fi
+
+	echo 
+	mv $value $1/$(basename -s .$ext1 $value ).$ext2
+done
+
+

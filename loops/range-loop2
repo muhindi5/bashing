@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#range in for loop: Decrease from 10 to 0. step value=2
+
+for value in {10..0..2}
+do
+	echo $value
+done
+echo All done
