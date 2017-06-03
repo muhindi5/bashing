@@ -2,7 +2,7 @@
 
 #range in for loop: Decrease from 10 to 0. step value=2
 
-for value in {10..0..2}
+for value in {200..0..5}
 do
 	echo $value
 done

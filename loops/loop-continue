@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Continue statement tells bash to stop running through this iteration of the
+# loop and begin the next iteration
+# Example: process files but skip if permissions not available
+
+for value in $1/*
+do
+    if [ ! -r $value]
+    then
+        echo $value not readable 1>&2
+        continue
+    fi
+    if [ -d $value ]
+    then
+        echo Found directory $value skipping
+        continue
+    fi
+    cp $value $1/backup
+done

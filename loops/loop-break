@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Using the break statement tell bash to leave the loop straight away.
+# can be used in exceptional situations where a lopp should end immediately
+# e.g running out of space during a copy
+
+# copy files
+for value in $1/*
+do
+    #check the used disk space percentage
+    used=$( df $1 | tail -1 | awk '{print $5}' | sed 's/%//' )
+    if [ $used -gt 90 ]
+    then
+        echo Low Disk space 1>&2
+        break
+    fi
+    cp $value $1/backup/
+done
+

@@ -17,9 +17,10 @@ do
 	if [ $on==1 ]; then
 			echo Changing file: $value
 	fi
-
-	echo 
 	mv $value $1/$(basename -s .$ext1 $value ).$ext2
 done
 
+# Example use:
+# Change all .htm files in fdir to .xhtml
+# ./loop-util ./fdir htm xhtml
 
